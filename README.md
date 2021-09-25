@@ -1,2 +1,3 @@
 # myredpacket
 myredpacket
+myredpacket是一个基于springboot+mysql+redis的一个抢红包系统，模拟并发抢红包的业务场景，基于漏桶算法的原理采用阻塞队列来进行限流，采用生产者和消费者的模式使用线程池异步处理请求，通过布隆过滤器过滤非真实请求，采用redis的分布式锁来控制并发，并将抢到红包的用户数据缓存在redis,之后再异步插入mysql数据库。
