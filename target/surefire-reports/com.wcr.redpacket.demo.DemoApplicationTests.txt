@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.wcr.redpacket.demo.DemoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.144 s <<< FAILURE! - in com.wcr.redpacket.demo.DemoApplicationTests
+contextLoads  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redPacketController': Unsatisfied dependency expressed through field 'redPacketService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redPacketService': Unsatisfied dependency expressed through field 'redisService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.wcr.redpacket.service.RedisService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redPacketService': Unsatisfied dependency expressed through field 'redisService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.wcr.redpacket.service.RedisService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.wcr.redpacket.service.RedisService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+
